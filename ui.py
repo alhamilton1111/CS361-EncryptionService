@@ -394,7 +394,8 @@ def main():
     userchoice = welcomePage()
     user = ""
     while userchoice == 2:
-        userchoice = helpHelp("intro")
+        # userchoice = helpHelp("intro")
+        userchoice = welcomePage()
 
     if userchoice == 1:
         user = login()
