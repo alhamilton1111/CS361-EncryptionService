@@ -90,6 +90,7 @@ def startServices(keyword):
         addUser("fred", "12345", sysKey)
     showUsers()
 
+    #!!!
     # setup Elizabeth's Help MicroService
     with open("helpMe.txt", "w") as helpFile:
         helpFile.write("help")
@@ -233,13 +234,13 @@ def showMalUsers():
 #           Help from Elizabeth
 #           Age Verification from Joe
 ###########################################################
-
+## !!
 # Elizabeth's MicroService contract functions
 def write_help():
     with open("helpMe.txt", "w") as f:
         f.write("help")
 
-
+## !!
 def get_help():
     with open("helpMe.txt") as f:
         helpful_message = f.readline()
@@ -265,7 +266,7 @@ def ageVerify(bDay):
             access = f"Age Verify Error: {r.status_code}"
             #print("The server returned error Status Code" + str(r.status_code))
     except:
-            print("Age Verifiy not Working! ")
+            print("Age Verify not Working! ")
 
     finally:
         return access
